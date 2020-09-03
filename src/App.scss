@@ -1,0 +1,193 @@
+.App {
+  height: auto;
+  min-height: 100vh;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+
+  h2, h3 {
+    color: greenyellow;
+  }
+}
+
+
+.Course {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: greenyellow;
+  height: 50px;
+  background: grey;
+  border-radius: 15px;
+  margin-top: 10px;
+
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    span {
+      font-weight: bolder;
+      font-size: 1.2em;
+      padding-right: 20px;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid darkolivegreen;
+    }
+  }
+}
+
+.Converter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: greenyellow;
+
+  .sale, .values {
+    width: 100%;
+  }
+
+  .sale {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    height: 50px;
+
+    .sale-select_wrapper {
+      position: relative;
+      display: inline-block;
+      &:after {
+        content: '\0025BC';
+        font: normal normal normal 10px/1 FontAwesome;
+        color: rgb(0, 0, 0);
+        right: 14px;
+        top: 4px;
+        height: 26px;
+        padding: 16px 0px 0px 8px;
+        position: absolute;
+        pointer-events: none;
+      }
+    }
+    .sale-select {
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border: 1px solid greenyellow;
+      background-color: greenyellow;
+      width: 70px;
+      height: 100%;
+      padding-left: 10px;
+      outline: none;
+      -webkit-appearance: none;
+    }
+
+    .sale-input {
+      width: 100%;
+      background-color: grey;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border: none;
+      outline: none;
+      color: greenyellow;
+      font-size: 16px;
+      font-family: inherit;
+      margin: 0;
+      padding-left: 15px;
+      -moz-appearance: textfield;
+      border: 1px solid grey;
+
+      &::placeholder {
+        color: greenyellow;
+      }
+
+      &:focus {
+      border: 1px solid rgb(142, 142, 142);
+      background-color: rgb(142, 142, 142);
+      }
+
+      &:hover {
+        border: 1px solid greenyellow;
+      }
+      
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.Current {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: grey;
+  border-radius: 15px;
+  margin: 5px 0;
+  padding: 0 15px;
+
+  h4 {
+    text-transform: uppercase;
+    margin: 16px 0;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #74af27;
+  font-size: 22px;
+
+  .logo {
+    color: #74af27;
+    font-weight: 700;
+
+    img {
+      padding-right: 15px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .Course {
+    flex-direction: column;
+    height: auto;
+
+    div {
+      width: 90%;
+      padding: 10px;
+      &:not(:last-child) {
+        border-bottom: 1px solid darkolivegreen;
+        border-right: none;
+      }
+    }
+  }
+
+  .Converter {
+    flex-direction: column;
+
+    .sale {
+      padding: 0 0 15px;
+    }
+  }
+
+  footer {
+    flex-direction: column-reverse;
+    padding-top: 15px;
+
+    img {
+      padding-top: 15px;
+    }
+  }
+}
