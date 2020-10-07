@@ -3,8 +3,8 @@ import {Current} from './current'
 import {CurrentToUAH} from './currentToUAH'
 
 export function Converter() {
-const [currency, setСurrency] = useState("uah")
-const [amount, setAmount] = useState(1)
+  const [currency, setСurrency] = useState("uah")
+  const [amount, setAmount] = useState(1)
 
   return (
     <div>

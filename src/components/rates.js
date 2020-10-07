@@ -1,12 +1,19 @@
-import React, {useContext} from 'react'
-import {Context} from '../context'
+import React from 'react'
+import {useSelector} from 'react-redux'
+import logo from '../assets/logo1.png'
+
 
 export function Rates() {
-  const {state} = useContext(Context)
+  const state = useSelector(state => state)
   
   return (
     <div>
+      <header className="head">
       <h2>Exchange Rates</h2>
+        <a href="https://github.com/VladimirChubenko/currency-exchange" target="_blank" rel="noopener noreferrer">
+          <img src={logo} alt="Logo GitHub" style={{width: '32px', paddingRight: '15px'}}/>
+        </a>
+      </header>
       <div className="Course">
         <div>
           <span>$</span>

@@ -1,8 +1,8 @@
-import React, {useContext} from 'react'
-import {Context} from '../context' 
+import React from 'react'
+import {useSelector} from 'react-redux'
 
 export function CurrentToUAH(props) {
-const {state} = useContext(Context)
+const state = useSelector(state => state)
 const {currency, amount} = props
 let currentValue
 

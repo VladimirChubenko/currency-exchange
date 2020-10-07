@@ -14,6 +14,11 @@
   }
 }
 
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .Course {
   display: flex;
@@ -74,6 +79,7 @@
         pointer-events: none;
       }
     }
+
     .sale-select {
       border-top-left-radius: 15px;
       border-bottom-left-radius: 15px;
